@@ -13,7 +13,6 @@
         <div class="header-divider"></div>
         <div class="tagline">
             <span>Social Media Marketing Agency</span>
-            <span>Video / Photography</span>
         </div>
     </div>
 
@@ -25,12 +24,150 @@
     </nav>
 </header>
 
-<section class="page-hero">
-    <div class="page-content">
-        <h1>Packages</h1>
-        <p>This is the Packages placeholder.</p>
+<!-- Packages Section -->
+<section class="packages-section">
+    <div class="packages-container">
+        <h2 class="packages-main-title">Our Packages</h2>
+        <div class="packages-grid">
+            <!-- First Row -->
+            <div class="package-box scroll-animate">
+                <div class="package-header">Starter</div>
+                <div class="package-price">$999</div>
+                <div class="package-period">/month</div>
+                <ul class="package-features">
+                    <li>✓ 4 Social Posts/Week</li>
+                    <li>✓ 1 Short Video</li>
+                    <li>✓ Community Management</li>
+                    <li>✓ Weekly Analytics Report</li>
+                    <li>✓ Email Support</li>
+                </ul>
+                <a href="contact.html" class="package-btn">Get Started</a>
+            </div>
+
+            <div class="package-box scroll-animate featured">
+                <div class="package-badge">POPULAR</div>
+                <div class="package-header">Professional</div>
+                <div class="package-price">$2,499</div>
+                <div class="package-period">/month</div>
+                <ul class="package-features">
+                    <li>✓ 8 Social Posts/Week</li>
+                    <li>✓ 2 Short Videos</li>
+                    <li>✓ 1 Long-Form Video</li>
+                    <li>✓ Professional Photography</li>
+                    <li>✓ Daily Community Management</li>
+                    <li>✓ Bi-Weekly Strategy Calls</li>
+                    <li>✓ Detailed Monthly Report</li>
+                </ul>
+                <a href="contact.html" class="package-btn primary">Get Started</a>
+            </div>
+
+            <div class="package-box scroll-animate">
+                <div class="package-header">Enterprise</div>
+                <div class="package-price">Custom</div>
+                <div class="package-period">pricing</div>
+                <ul class="package-features">
+                    <li>✓ Unlimited Posts/Month</li>
+                    <li>✓ Full Video Production</li>
+                    <li>✓ Professional Photography</li>
+                    <li>✓ Dedicated Account Manager</li>
+                    <li>✓ Weekly Strategy Meetings</li>
+                    <li>✓ Custom Analytics Dashboard</li>
+                    <li>✓ Priority Support</li>
+                </ul>
+                <a href="contact.html" class="package-btn">Contact Us</a>
+            </div>
+
+            <!-- Second Row -->
+            <div class="package-box scroll-animate">
+                <div class="package-header">Photography Only</div>
+                <div class="package-price">$799</div>
+                <div class="package-period">/month</div>
+                <ul class="package-features">
+                    <li>✓ 4 Professional Photo Sessions</li>
+                    <li>✓ Unlimited High-Res Images</li>
+                    <li>✓ Professional Editing</li>
+                    <li>✓ Cloud Storage</li>
+                    <li>✓ Usage Rights</li>
+                </ul>
+                <a href="contact.html" class="package-btn">Get Started</a>
+            </div>
+
+            <div class="package-box scroll-animate">
+                <div class="package-header">Video Production</div>
+                <div class="package-price">$1,899</div>
+                <div class="package-period">/month</div>
+                <ul class="package-features">
+                    <li>✓ 4 Video Productions</li>
+                    <li>✓ Short-Form Content</li>
+                    <li>✓ Professional Editing</li>
+                    <li>✓ Motion Graphics</li>
+                    <li>✓ Multi-Platform Optimization</li>
+                </ul>
+                <a href="contact.html" class="package-btn">Get Started</a>
+            </div>
+
+            <div class="package-box scroll-animate">
+                <div class="package-header">Strategy Only</div>
+                <div class="package-price">$599</div>
+                <div class="package-period">/month</div>
+                <ul class="package-features">
+                    <li>✓ Content Calendar</li>
+                    <li>✓ Audience Analysis</li>
+                    <li>✓ Monthly Strategy Call</li>
+                    <li>✓ Performance Tracking</li>
+                    <li>✓ Growth Recommendations</li>
+                </ul>
+                <a href="contact.html" class="package-btn">Get Started</a>
+            </div>
+        </div>
     </div>
 </section>
+
+<!-- FAQ Section -->
+<section class="packages-faq">
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item scroll-animate">
+                <h3>Can I customize a package?</h3>
+                <p>Absolutely! All our packages are flexible. Contact us to discuss your specific needs.</p>
+            </div>
+            <div class="faq-item scroll-animate">
+                <h3>What's included in analytics?</h3>
+                <p>Engagement metrics, reach, follower growth, click-through rates, and actionable insights.</p>
+            </div>
+            <div class="faq-item scroll-animate">
+                <h3>Can I cancel anytime?</h3>
+                <p>Yes, with 30 days notice. No long-term contracts required.</p>
+            </div>
+            <div class="faq-item scroll-animate">
+                <h3>Do you use our brand guidelines?</h3>
+                <p>Yes, we follow your brand guidelines closely for all content creation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Scroll animation trigger
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+    });
+</script>
 
 </body>
 </html>

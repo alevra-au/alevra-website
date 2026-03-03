@@ -13,7 +13,6 @@
         <div class="header-divider"></div>
         <div class="tagline">
             <span>Social Media Marketing Agency</span>
-            <span>Video / Photography</span>
         </div>
     </div>
 
@@ -24,12 +23,105 @@
         <a href="contact.html" class="cta">Work With Us</a>
     </nav>
 </header>
-<section class="page-hero">
-    <div class="page-content">
-        <h1>About Us</h1>
-        <p>This is the About page placeholder.</p>
+<!-- About heading -->
+<section class="about-intro">
+    <div class="intro-container">
+        <h2>About Us</h2>
     </div>
 </section>
+
+<!-- Our Story Section -->
+<section class="story-section">
+    <div class="story-container">
+        <div class="story-text">
+            <h2>Our Story</h2>
+            <p>Alevra started with a simple mission: to transform how brands connect with their audience through authentic, creative digital marketing. Over the years, we've grown from a small team to a full-service agency, working with everything from startups to Fortune 500 companies.</p>
+            <p>Our passion lies in combining data-driven strategies with creative excellence. We don't just create content—we create experiences that resonate and drive real results for our clients.</p>
+        </div>
+        <div class="story-image">
+            <div class="placeholder-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+    <div class="team-container">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card scroll-animate">
+                <div class="team-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                <h3>Sarah Johnson</h3>
+                <p class="role">Creative Director</p>
+                <p class="bio">10+ years in brand strategy and content creation</p>
+            </div>
+            <div class="team-card scroll-animate">
+                <div class="team-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                <h3>Mike Chen</h3>
+                <p class="role">Video Producer</p>
+                <p class="bio">Filmmaker and cinematographer with viral expertise</p>
+            </div>
+            <div class="team-card scroll-animate">
+                <div class="team-avatar" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+                <h3>Emma Davis</h3>
+                <p class="role">Social Media Manager</p>
+                <p class="bio">Community builder with proven engagement metrics</p>
+            </div>
+            <div class="team-card scroll-animate">
+                <div class="team-avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                <h3>Alex Rodriguez</h3>
+                <p class="role">Analytics Specialist</p>
+                <p class="bio">Data scientist turning metrics into actionable insights</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section">
+    <div class="values-container">
+        <h2>Our Values</h2>
+        <div class="values-grid">
+            <div class="value-card scroll-animate">
+                <h3>🎯 Excellence</h3>
+                <p>We strive for excellence in every project, every campaign, and every interaction with our clients.</p>
+            </div>
+            <div class="value-card scroll-animate">
+                <h3>🤝 Collaboration</h3>
+                <p>Your success is our success. We work closely with you as true partners in growth.</p>
+            </div>
+            <div class="value-card scroll-animate">
+                <h3>💡 Innovation</h3>
+                <p>We stay ahead of trends and constantly innovate to keep your brand relevant.</p>
+            </div>
+            <div class="value-card scroll-animate">
+                <h3>📈 Results</h3>
+                <p>We're obsessed with results. Every strategy we build is designed to deliver measurable impact.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Scroll animation trigger
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+    });
+</script>
 
 </body>
 </html>

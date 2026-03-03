@@ -13,7 +13,6 @@
         <div class="header-divider"></div>
         <div class="tagline">
             <span>Social Media Marketing Agency</span>
-            <span>Video / Photography</span>
         </div>
     </div>
 
@@ -25,12 +24,120 @@
     </nav>
 </header>
 
-<section class="page-hero">
-    <div class="page-content">
-        <h1>Services</h1>
-        <p>This is the Services placeholder.</p>
+<!-- Services Categories Section -->
+<section class="services-categories">
+    <div class="services-container">
+        <h2>All Services</h2>
+        
+        <!-- Creative & Design Services -->
+        <div class="service-category">
+            <h3 class="category-title">Creative & Design</h3>
+            <div class="service-grid">
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">📸</div>
+                    <h4>Photography</h4>
+                    <p>Professional product photography, lifestyle shoots, and brand photography that captures your unique story. High-quality imagery optimized for all social platforms.</p>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">🎬</div>
+                    <h4>Video Production</h4>
+                    <p>From concept to post-production, we create compelling video content that drives engagement. Promotional videos, testimonials, and viral short-form content.</p>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">🎨</div>
+                    <h4>Business Branding</h4>
+                    <p>Complete brand identity development including custom logo design, color palette selection, and font pairing. We also create branded merchandise like t-shirts, hoodies, and hats to build brand loyalty. Perfect foundation for new businesses or rebranding projects.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Digital Marketing Services -->
+        <div class="service-category">
+            <h3 class="category-title">Digital Marketing</h3>
+            <div class="service-grid">
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">📱</div>
+                    <h4>Social Media Strategy</h4>
+                    <p>Data-driven strategies that align with your business goals. Audience analysis, content calendars, community management, and performance analytics.</p>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">🔍</div>
+                    <h4>SEO Setup</h4>
+                    <p>Complete SEO optimization including Google Business Profile setup, keyword research, and local SEO for searches like "Plumber Near Me". Get found by customers searching for your services.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Web & Technology Services -->
+        <div class="service-category">
+            <h3 class="category-title">Web & Technology</h3>
+            <div class="service-grid">
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">🌐</div>
+                    <h4>Websites + Hosting</h4>
+                    <p>Custom website design and development with reliable hosting. Fast, responsive, and optimized for conversions. Your online home to connect with customers 24/7.</p>
+                </div>
+
+                <div class="service-card scroll-animate">
+                    <div class="service-icon">⚙️</div>
+                    <h4>Booking System & Automation</h4>
+                    <p>Set up automated booking systems, appointment scheduling, and workflow automation to save time and improve customer experience. Streamline your operations.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
+
+<!-- Why Choose Section -->
+<section class="services-why">
+    <h2>Why Choose Our Services</h2>
+    <div class="why-grid">
+        <div class="why-card scroll-animate">
+            <div class="why-icon">✓</div>
+            <h3>Full-Service Solutions</h3>
+            <p>From design to development to marketing, we handle it all under one roof</p>
+        </div>
+        <div class="why-card scroll-animate">
+            <div class="why-icon">✓</div>
+            <h3>Experienced Team</h3>
+            <p>Industry professionals with years of proven success across all services</p>
+        </div>
+        <div class="why-card scroll-animate">
+            <div class="why-icon">✓</div>
+            <h3>Transparent Process</h3>
+            <p>Clear communication and regular updates on your projects and campaigns</p>
+        </div>
+        <div class="why-card scroll-animate">
+            <div class="why-icon">✓</div>
+            <h3>Results-Oriented</h3>
+            <p>Every service designed to deliver measurable outcomes and growth</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Scroll animation trigger
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-animate').forEach(el => {
+        observer.observe(el);
+    });
+</script>
 
 </body>
 </html>
